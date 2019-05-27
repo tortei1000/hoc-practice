@@ -1,24 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SuperSecret from './components/SuperSecret'
+import OnOffButton from './components/OnOffButton'
+import AccordianMenu from './components/AccordianMenu'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SuperSecret isAuthenticated={true} />
+      <AccordianMenu title='Hi'>
+        <p>this is props.children</p>
+      </AccordianMenu>
+      <OnOffButton />
     </div>
   );
 }
